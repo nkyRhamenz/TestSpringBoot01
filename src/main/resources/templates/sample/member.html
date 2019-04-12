@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link href="/css/member.css" th:href="@{/css/member.css}" rel="stylesheet">
+	<link rel="stylesheet" media="all" th:href="@{/css/member.css}">
+</head>
+<body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
+	<script type="text/javascript" src="/js/member.js"></script>
+	<form action="member" method="POST" name="memberReg">
+		<div class="container">
+			<div class="row">
+				<div class="gray">
+					<span style="color:Red;">(※)</span>は必須
+				</div>
+			</div>
+			<div class="UserInfoTitle">1</div>
+			<div class="row">
+				<div class="UserInfo1_1 head2">お名前</div>
+				<div class="row">
+					<div class="UserDtl_1"><span style="color:Red;">（※）</span>氏名（姓）</div>
+					<input type="text" name="seiName" id="seiName" size="20" maxlength="20" class="kana" style="ime-active;">
+				</div>
+				<div class="row">
+					<div class="UserDtl_1"><span style="color:Red;">（※）</span>氏名（名）</div>
+					<input type="text" name="meiName" size="20" maxlength="20" class="kana" style="ime-active;">
+				</div>
+				<div class="UserInfo1_1 head3">ご住所</div>
+				<div class="row">
+					<div class="UserDtl_1"><span style="color:Red;">（※）</span>郵便番号</div>
+					<input type="text" name="nkAdd" size="20" maxlength="20" class="kana" style="ime-active;">
+				</div>
+				<div class="row">
+					<div class="UserDtl_1"><span style="color:Red;">（※）</span>住所（都道府県）</div>
+					<input type="text" name="nmAdd1" size="50" maxlength="50" class="kana" style="ime-active;">
+				</div>
+				<div class="row">
+					<div class="UserDtl_1"><span style="color:Red;">（※）</span>住所（市区町村）</div>
+					<input type="text" name="nmAdd2" size="50" maxlength="50" class="kana" style="ime-active;">
+				</div>
+				<div class="row">
+					<div class="UserDtl_1"><span style="color:Red;">（※）</span>住所（番地/号室）</div>
+					<input type="text" name="nmAdd3" size="50" maxlength="50" class="kana" style="ime-active;">
+				</div>
+				<div class="UserInfo1_1 head">ご連絡先</div>
+				<div class="row">
+					<div class="UserDtl_1"><span style="color:Red;">（※）</span>電話番号</div>
+					<input type="text" name="nkTel" size="15" maxlength="15" class="num" style="ime-active;">
+				</div>
+				<div class="UserInfo1_1 head">性別</div>
+				<div class="row">
+					<div class="UserDtl_1"><span style="color:Red;">（※）</span>性別</div>
+					<input type="text" name="genderNo" size="15" maxlength="15" class="num" style="ime-active;">
+				</div>
+				<div class="UserInfo1_1 head">生年月日</div>
+				<div class="row">
+					<div class="UserDtl_1"><span style="color:Red;"></span>　　　生年月日</div>
+					<input type="text" name="birthdayDt" size="20" maxlength="20" class="kana" style="ime-active;">
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="UserInfoTitle2">2</div>
+			<div class="row2">
+				<div class="UserInfo1_1 head">メールアドレス</div>
+				<div class="row">
+					<div class="UserDtl_1"><span style="color:Red;">（※）</span>アドレス</div>
+					<input type="text" id="name" name="nkMail" size="20" maxlength="20" class="kana" style="ime-active;">
+				</div>
+				<div class="UserInfo1_1 head2">パスワード</div>
+				<div class="row">
+					<div class="UserDtl_1"><span style="color:Red;">（※）</span>パスワード</div>
+					<input type="text" name="nkPass" size="50" maxlength="50" class="kana" style="ime-active;">
+				</div>
+				<div class="row">
+					<div class="UserDtl_1"><span style="color:Red;">（※）</span>パスワード再入力</div>
+					<input type="text" id="name" name="nkPass2" size="20" maxlength="20" class="kana" style="ime-active;">
+				</div>
+			</div>
+			<input class="reset flat fade" type="button" value="登録" name="action" id="doCommit" onClick="executeSubmit()">
+		</div>
+	</form>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang=ja xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset	="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<link href="/css/index.css" th:href="@{/css/index.css}" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+		<title>Insert title here</title>
+	</head>
+	<body>
+	<!-- 
+	<script type="text/javascript" src="/js/index.js"></script>
+	 -->
+		<table class="list">
+		  <tbody><tr>
+		    <th class="r1" style="width: 5%">受付NO</th>
+			<th class="r1" style="width: 10%">名前（姓）</th>
+		    <th class="r1" style="width: 10%">名前（名）</th>
+			<th class="r2" style="width: 5%">郵便番号</th>
+			<th class="r2" style="width: 10%">住所１</th>
+			<th class="r2" style="width: 10%">住所２</th>
+		    <th class="r3" style="width: 10%">住所３</th>
+			<th class="r3" style="width: 5%">TEL</th>
+		    <th class="r3" style="width: 5%">性別</th>
+			<th class="r4" style="width: 5%">誕生日</th>
+			<th class="r4" style="width: 10%">メールアドレス</th>
+		    <th class="r4" style="width: 5%">パスワード</th>
+		  </tr>
+		  <tr th:each="list:${list}">
+		    <td><a href="/member" th:href="@{/member}" th:text="${list.ukeNo}"></a></td>
+			<td th:text="${list.seiName}"></td>
+		    <td th:text="${list.meiName}"></td>
+			<td th:text="${list.nkAdd}"></td>
+			<td th:text="${list.nmAdd1}"></td>
+			<td th:text="${list.nmAdd2}"></td>
+		    <td th:text="${list.nmAdd3}"></td>
+			<td th:text="${list.nkTel}"></td>
+		    <td th:text="${list.genderNo}"></td>
+			<td th:text="${list.birthdayDt}"></td>
+			<td th:text="${list.nkMail}"></td>
+		    <td th:text="${list.nkPass}"></td>
+		  </tr>
+		</tbody></table>
+		<div class="button">
+			<a href="./member" th:href="@{/member}" class="btn-circle-flat">新規登録</a>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
+	</body>
+</html>
